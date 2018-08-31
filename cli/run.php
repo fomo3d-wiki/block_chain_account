@@ -83,7 +83,6 @@ class Run
         }
         $class = $this->caseNamespace.'\\'.ucfirst($this->case);
         if(!class_exists($class)) {
-            $class .= 'Case';
             if(!class_exists($class)) {
                 exit('类['.$class.']不存在'.PHP_EOL);
             }
