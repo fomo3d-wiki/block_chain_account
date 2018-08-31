@@ -8,9 +8,9 @@ namespace libs;
  * @Date: 2018/8/28
  * @Time: 20:06
  */
-class en
+class EN
 {
-    public $fileName = './geten,json';
+    public $fileName = APP.'/datas/geten.json';
 
     public function getEN()
     {

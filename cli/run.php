@@ -8,6 +8,8 @@ namespace cli;
  * @Time: 14:39
  */
 
+use cli\cases\Account;
+
 define('APP', dirname(dirname(__FILE__)));
 
 define('CLI', APP.'/cli');
@@ -82,15 +84,6 @@ class Run
             exit('case必须被指定'.PHP_EOL);
         }
         $class = $this->caseNamespace.'\\'.ucfirst($this->case);
-        if(!class_exists($class)) {
-            if(!class_exists($class)) {
-                exit('类['.$class.']不存在'.PHP_EOL);
-            }
-        }
-
-        spl_autoload_register(function ($class_name) {
-            include APP .'/'. strtolower($class_name) . '.php';
-        });
 
         $object = new $class();
 
@@ -114,10 +107,18 @@ class Run
     }
 }
 
-$cli = new Run();
+
 try {
+
+    spl_autoload_register(function ($class_name) {
+        $file =  APP .'/'. str_replace('/', '\\', strtolower($class_name)) . '.php';
+        @include $file;
+    });
+
+    $cli = new Run();
     $cli->run();
+
 } catch (\Exception $e) {
-    var_dump($e->getMessage());
+    print_r($e->getMessage());
 }
 

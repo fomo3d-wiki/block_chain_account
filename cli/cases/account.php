@@ -1,5 +1,5 @@
 <?php
-namespace clis\cases;
+namespace cli\cases;
 /**
  * Created by PhpStorm.
  * @Author: Luck Li Di
@@ -105,7 +105,17 @@ class Account
         /**
          * 简单打印数据
          */
-        var_dump($this->json_data);die;
+        $account        = json_encode($account, JSON_UNESCAPED_UNICODE);
+        $root_key       = json_encode($root_key, JSON_UNESCAPED_UNICODE);
+        $ex_private_key = json_encode($ex_private_key);
+$str=<<<EON
+<h5>'seed':$seed</h5>
+<p>'root_key':$root_key</p>
+<h5>'ex_private_key':$ex_private_key</h5>
+<p><strong><span style="color:gold;">'account'</span></strong>:$account</p>
+EON;
+        echo $str;
+
     }
 
     /**
