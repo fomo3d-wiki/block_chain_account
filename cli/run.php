@@ -83,10 +83,15 @@ class Run
         if(!isset($this->case)) {
             exit('case必须被指定'.PHP_EOL);
         }
-        $class = $this->caseNamespace.'\\'.ucfirst($this->case);
+        if (self::isCli()) {
+            $file =  CASES . strtolower($this->case).'.php';
+            @include $file; $case=ucfirst($this->case);
+            $object = new $case();
 
-        $object = new $class();
-
+        } else {
+            $class = $this->caseNamespace.'\\'.ucfirst($this->case);
+            $object = new $class();
+        }
         return call_user_func([$object,$this->function]);
     }
 
