@@ -85,13 +85,11 @@ class Run
         }
         if (self::isCli()) {
             $file =  CASES . strtolower($this->case).'.php';
-            @include $file; $case=ucfirst($this->case);
-            $object = new $case();
-
-        } else {
-            $class = $this->caseNamespace.'\\'.ucfirst($this->case);
-            $object = new $class();
+            @include $file;
         }
+
+        $class = $this->caseNamespace.'\\'.ucfirst($this->case);
+        $object = new $class();
         return call_user_func([$object,$this->function]);
     }
 
