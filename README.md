@@ -8,7 +8,7 @@
 
 **③：更多有趣功能，有待探索，欢迎留言交流~**
 
-**使用说明：**
+# 使用说明
 
 **一、linux下，cli 使用 案例**
 
@@ -27,7 +27,7 @@
 
 3、`http://你的host:端口/run.php?c=account&f=decodeAllMnemonic`
 
-**看到如下结果，证明你成功了~**
+# 结果如下
 
 'seed':4ed8d4b17698ddeaa1f1559f152f87b5d472f725ca86d341bd0276f1b61197e21dd5a391f9f5ed7340ff4d4513aab9cce44f9497a5e7ed85fd818876b6eb402e
 
@@ -38,6 +38,6 @@
 'account':{"public_key":"0x02cf1da40f78c2090ce8b2df9795bc121e7fe0776a827c5f7b43e1e56f9511f745","private_key":"0xabf82ff96b463e9d82b83cb9bb450fe87e6166d4db6d7021d0c71d7e960d5abe","address":"0x959fd7ef9089b7142b6b908dc3a8af7aa8ff0fa1"}
 
 
-**Code of Conduct**
+# Code of Conduct
 
 We aim to share our knowledge and findings as we work daily to improve our product, for our community, in a safe and open space. We work as we live, as kind and considerate human beings who learn and grow from giving and receiving positive, constructive feedback. We reserve the right to delete or ban any behavior violating this base foundation of respect.
