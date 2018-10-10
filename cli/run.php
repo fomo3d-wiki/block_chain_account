@@ -81,12 +81,18 @@ class Run
     public function run()
     {
         if(!isset($this->case)) {
-            exit('case必须被指定'.PHP_EOL);
+            exit('case必须被指定：例如 -c ***'.PHP_EOL);
         }
-        if (self::isCli()) {
-            $file =  CASES . strtolower($this->case).'.php';
-            @include $file;
+        if(!isset($this->function)) {
+            exit('function必须被指定：例如 -f ***'.PHP_EOL);
         }
+
+        /**
+         * todo 自动加载失败，待优化①
+         */
+        $file =  CASES .'/'.strtolower($this->case).'.php';
+        @include $file;
+
 
         $class = $this->caseNamespace.'\\'.ucfirst($this->case);
         $object = new $class();
@@ -112,13 +118,19 @@ class Run
 
 
 try {
-
-    spl_autoload_register(function ($class_name) {
-        $file =  APP .'/'. str_replace('/', '\\', strtolower($class_name)) . '.php';
+    include APP.'/libs/EtherClient.php';
+    include APP.'/libs/JsonRpc.php';
+    /**
+     * todo 自动加载失败，待优化②
+     */
+    /*spl_autoload_register(function ($class_name) {
+        $file =  APP .'/'. str_replace('\\', '/', strtolower($class_name)) . '.php';
+        var_dump([$class_name,$file]);die;
         @include $file;
-    });
+    });*/
 
     $cli = new Run();
+
     $cli->run();
 
 } catch (\Exception $e) {
