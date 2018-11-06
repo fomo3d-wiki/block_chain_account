@@ -44,8 +44,9 @@ We aim to share our knowledge and findings as we work daily to improve our produ
 
 # Donations
 I do this because I love it, but if you want to buy me a coffee, I won't say no. :o)
-
+```solity
 Ethereum: 0x104F8FE69dF59fe4c27dd487779D49A9Ec5caCC9
+```
 
 # License
 Completely MIT Licensed. Including ALL dependencies.
