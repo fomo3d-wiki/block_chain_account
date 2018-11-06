@@ -8,7 +8,7 @@
 
 **③：更多有趣功能，有待探索，欢迎留言交流~**
 
-# 使用说明
+## 使用说明
 
 **一、linux下，cli 使用 案例**
 
@@ -27,7 +27,7 @@
 
 3、`http://你的host:端口/run.php?c=account&f=decodeAllMnemonic`
 
-# 结果如下
+## 结果如下
 
 'seed':4ed8d4b17698ddeaa1f1559f152f87b5d472f725ca86d341bd0276f1b61197e21dd5a391f9f5ed7340ff4d4513aab9cce44f9497a5e7ed85fd818876b6eb402e
 
@@ -49,8 +49,12 @@ Ethereum: 0x104F8FE69dF59fe4c27dd487779D49A9Ec5caCC9
 
 # License
 Completely MIT Licensed. Including ALL dependencies.
-######If you love or like it ！Please jion us，邮件:lucklidi@126.com，微信ID:adi1427569517
-# 如感兴趣，请直接加入:
+```
+If you love or like it ！Please jion us！
+```
+邮件:lucklidi@126.com，微信ID:adi1427569517
+
+## 如感兴趣，请直接加入:
 ```
 or you can scan it
 ```
