@@ -49,4 +49,10 @@ Ethereum: 0x104F8FE69dF59fe4c27dd487779D49A9Ec5caCC9
 
 # License
 Completely MIT Licensed. Including ALL dependencies.
-If you love or like it ！Please jion us，邮件:lucklidi@126.com，微信ID:adi1427569517
+######If you love or like it ！Please jion us，邮件:lucklidi@126.com，微信ID:adi1427569517
+# 如感兴趣，请直接加入:
+```
+or you can scan it
+```
+
+![Image text](https://github.com/fomo3d-wiki/books/blob/master/images/weixinGZ.jpg)
