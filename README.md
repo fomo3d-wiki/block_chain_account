@@ -1,5 +1,7 @@
 # Block_chain_account
 
+[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/fomo3d-wik)
+
 **Block_account 来源于Bitcoin账户体系：**
 
 **①：生成区块链账户(包含，比特币、区块链等)**
